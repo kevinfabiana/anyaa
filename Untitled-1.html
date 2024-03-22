@@ -161,6 +161,12 @@
     <!-- Tombol untuk melanjutkan -->
     <a href="Untitled-3.html" class="bottom-left-button">Lanjutkan</a>
 
+    <!-- Penambahan elemen audio untuk pemutaran lagu -->
+    <audio id="myAudio" controls loop style="display:none;">
+        <source src="Duvet.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
     <script>
         // Fungsi untuk membuat elemen debu secara dinamis
         function createDust() {
@@ -178,6 +184,15 @@
 
         // Panggil fungsi untuk membuat debu saat halaman dimuat
         window.onload = createDust;
+
+        // Fungsi untuk memutar lagu saat halaman dimuat
+        function playAudio() {
+            var audio = document.getElementById("myAudio");
+            audio.play();
+        }
+
+        // Panggil fungsi untuk memutar lagu saat halaman dimuat
+        window.onload = playAudio;
     </script>
 </body>
 </html>
