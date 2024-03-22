@@ -126,37 +126,17 @@
     <source src="turtle.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video>
+<audio id="myAudio" controls loop style="display:none;">
+  <source src="Duvet.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
 <div id="typing-text">One last gift for u</div>
 <div class="dust-container">
     <!-- Debu akan ditambahkan secara dinamis menggunakan JavaScript -->
 </div>
 <button class="button" onclick="window.location.href='Untitled-4.html'">Lanjutkan</button>
 
-
-<script>
-    // Fungsi untuk membuat elemen debu secara dinamis
-    function createDust() {
-        const dustContainer = document.querySelector('.dust-container');
-        const dustCount = 50; // Jumlah debu yang ingin ditampilkan
-
-        for (let i = 0; i < dustCount; i++) {
-            const dust = document.createElement("div");
-            dust.className = "dust";
-            dust.style.left = Math.random() * window.innerWidth + "px";
-            dust.style.animationDelay = Math.random() * 15 + "s"; // Menentukan keterlambatan animasi debu
-            dustContainer.appendChild(dust);
-        }
-    }
-
-    // Panggil fungsi untuk membuat debu saat halaman dimuat
-    window.onload = createDust;
-
-    const video = document.getElementById("myVideo");
-
-    video.addEventListener("ended", function() {
-        this.pause();
-    });
-</script>
+<script src="main.js"></script> <!-- Referensi ke file JavaScript Anda -->
 
 </body>
 </html>
